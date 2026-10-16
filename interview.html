@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Engineering Interview Questions</title>
+  <meta name="description" content="Interview questions and answers for AI engineering, organized as a flow from Python to deployment. Prepared by Arunkumar Ravichandran.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="wrap wide">
+    <nav class="bar" aria-label="Site">
+      <div class="bar-row">
+        <div class="switch" role="navigation" aria-label="Pages">
+          <a href="index.html">Roadmap</a>
+          <a href="interview.html" aria-current="page">Interview</a>
+        </div>
+        <div class="stat"><strong id="known-pct">0%</strong><span id="known-count">0 of 0 known</span></div>
+        <div class="bar-actions">
+        </div>
+      </div>
+      <div class="meter" role="progressbar" aria-label="Questions marked known" aria-valuemin="0" aria-valuemax="100" id="meter">
+        <div class="meter-fill" id="meter-fill"></div>
+      </div>
+    </nav>
+
+    <header class="hero slim">
+      <div class="eyebrow">Interview prep · follows the roadmap</div>
+      <h1>Interview questions</h1>
+      <p class="lead">Pick a stage on the left and work through its questions in order. Open a question to see the answer, then mark it as known.</p>
+      <p class="by">Prepared by <strong>Arunkumar Ravichandran</strong></p>
+    </header>
+
+    <label class="search block" for="dq">
+      <span class="sr">Search questions</span>
+      <input id="dq" type="search" placeholder="Search all questions and answers, e.g. chunking" autocomplete="off">
+    </label>
+
+    <div class="qlayout">
+      <aside class="rail" id="rail" aria-label="Stages"></aside>
+      <main class="qmain" id="qmain" aria-live="polite"></main>
+    </div>
+
+    <footer class="foot">
+      <span>Prepared by <strong>Arunkumar Ravichandran</strong></span>
+      <button type="button" class="btn" id="clear-known">Clear known marks</button>
+    </footer>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="questions.js"></script>
+  <script src="interview.js"></script>
+</body>
+</html>

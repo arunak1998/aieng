@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Engineering Roadmap</title>
+  <meta name="description" content="A clear, interactive roadmap from Python to production AI systems. Prepared by Arunkumar Ravichandran.">
+  <meta name="theme-color" content="#07080f">
+  <meta property="og:title" content="AI Engineering Roadmap">
+  <meta property="og:description" content="From Python to production AI systems, as an interactive tree. Prepared by Arunkumar Ravichandran.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#roadmap">Skip to roadmap</a>
+
+  <div class="wrap wide">
+    <header class="hero">
+      <div class="eyebrow">Interactive roadmap · 9 stages · 3 phases</div>
+      <h1>AI Engineering Roadmap</h1>
+      <p class="lead">From Python to production AI systems. Follow the tree from the foundation up, tick topics as you learn them, and always see what to do next.</p>
+      <p class="by">Prepared by <strong>Arunkumar Ravichandran</strong></p>
+    </header>
+
+    <nav class="bar" aria-label="Progress and tools">
+      <div class="bar-row">
+        <div class="switch" role="navigation" aria-label="Pages">
+          <a href="index.html" aria-current="page">Roadmap</a>
+          <a href="interview.html">Interview</a>
+        </div>
+        <div class="stat"><strong id="pct">0%</strong><span id="count">0 of 0 topics</span></div>
+        <div class="bar-actions">
+          <button type="button" id="continue" class="btn primary">Continue</button>
+        </div>
+      </div>
+      <div class="meter" role="progressbar" aria-label="Overall progress" aria-valuemin="0" aria-valuemax="100" id="meter">
+        <div class="meter-fill" id="meter-fill"></div>
+      </div>
+    </nav>
+
+    <main>
+      <section id="roadmap" aria-labelledby="road-h">
+        <div class="tag">The whole path</div>
+        <h2 id="road-h">One root, three phases, nine stages</h2>
+        <p class="sub">Follow the tree from the top, in order. Each stage branches into its topic groups. Tick topics as you learn them. The glowing stage is next.</p>
+        <div class="toolbar">
+          <label class="search" for="q">
+            <span class="sr">Search topics</span>
+            <input id="q" type="search" placeholder="Search topics, e.g. FastAPI" autocomplete="off">
+          </label>
+          <div class="seg" role="group" aria-label="Filter topics">
+            <button type="button" class="btn on" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="btn" data-filter="todo" aria-pressed="false">Remaining</button>
+            <button type="button" class="btn" data-filter="done" aria-pressed="false">Done</button>
+          </div>
+        </div>
+        <p id="empty" class="empty" hidden>No topics match. Clear the search or change the filter.</p>
+        <div id="tree" class="tree"></div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <span>Prepared by <strong>Arunkumar Ravichandran</strong></span>
+      <button type="button" class="btn" id="reset">Reset progress</button>
+    </footer>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
